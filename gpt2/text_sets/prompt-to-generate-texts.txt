@@ -1,0 +1,34 @@
+Generate two sets of short English texts, 30 texts in each set.
+Each text must consist of exactly 4 short, simple sentences
+(roughly 10 to 15 words each), and the last sentence must
+end with a period.
+
+Set A ("causal"): Each text should be a short narrative describing
+a sequence of events in temporal/causal order. The 4 sentences
+should describe things that happen one after another.
+
+Example (use this as the first entry of causal_texts):
+"The glass slipped from her hand. It fell to the floor. It broke into many pieces. She swept them up carefully."
+
+Set B ("non-causal"): Each text should consist of 4 independent
+factual statements on a common theme. The statements should have
+no temporal, causal, or discourse dependency on each other.
+In particular, avoid anaphoric references between sentences (e.g.,
+"also", "the above", "all three") and avoid listing items in a
+conventional ascending or descending order (e.g., by size, date,
+or number).
+
+Example (use this as the first entry of noncausal_texts):
+"A violin is played with a bow. A flute is played by blowing air. A drum is played by striking it. A harp is played by plucking strings."
+
+Output the result as a JSON object with the following structure:
+{
+  "metadata": {
+    "model": "<your model name and version>",
+    "date": "<today's date and year>",
+    "note": "Output used as-is without manual revision or selection."
+  },
+  "causal_texts": [<list of 30 strings>],
+  "noncausal_texts": [<list of 30 strings>]
+}
+Output only the JSON with no other text.
