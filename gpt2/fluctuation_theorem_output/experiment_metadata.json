@@ -1,0 +1,54 @@
+{
+  "experiment": "Fluctuation theorem verification (GPT-2, token reversal, two temperatures)",
+  "reference_paper": "Sagawa (2026), Stochastic Thermodynamics for Autoregressive Generative Models: A Non-Markovian Perspective",
+  "timestamp_utc": "2026-04-07T07:56:39.470731+00:00",
+  "random_seed": 42,
+  "environment": {
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "python_version": "3.12.13",
+    "torch_version": "2.10.0+cu128",
+    "cuda_version": "12.8",
+    "transformers_version": "5.0.0",
+    "numpy_version": "2.0.2",
+    "matplotlib_version": "3.10.0",
+    "gpu": "Tesla T4 (14.6 GB)",
+    "device_used": "cuda",
+    "is_google_colab": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cudnn_version": "91002"
+  },
+  "model": {
+    "name": "gpt2",
+    "source": "huggingface/transformers",
+    "vocab_size": 50257,
+    "n_parameters": 124439808,
+    "state_dict_sha256": "dba84d2c855de566de82c528dfbb95cca860ca1e9fe345cfc0abbb53fb7460af",
+    "tokenizer_vocab_sha256": "5ef55c89f5439ed6ccc0d6960875e06967265c89552024d42d91844a56699755"
+  },
+  "experiment_config": {
+    "n_samples_per_temperature": 5000,
+    "max_new_tokens": 5,
+    "temperature_1": 3.0,
+    "temperature_2": 4.0,
+    "bootstrap_B": 2000,
+    "convergence_step": 10
+  },
+  "key_results": {
+    "tau=3.0": {
+      "sigma_token_mean": 2.216267076253891,
+      "sigma_token_SE": 0.03118398636939874,
+      "exp_neg_sigma_mean": 0.9745281072492904,
+      "exp_neg_sigma_SE": 0.08182861450646613,
+      "N": 5000
+    },
+    "tau=4.0": {
+      "sigma_token_mean": 1.178452884864807,
+      "sigma_token_SE": 0.022159058762710793,
+      "exp_neg_sigma_mean": 0.9748172536574875,
+      "exp_neg_sigma_SE": 0.03398492212016151,
+      "N": 5000
+    }
+  },
+  "theoretical_prediction": 1.0
+}
