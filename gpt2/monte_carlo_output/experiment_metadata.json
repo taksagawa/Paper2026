@@ -1,0 +1,47 @@
+{
+  "experiment": "Monte Carlo entropy production (GPT-2 generated text)",
+  "reference_paper": "Sagawa (2026), Stochastic Thermodynamics for Autoregressive Generative Models: A Non-Markovian Perspective",
+  "timestamp_utc": "2026-04-07T07:33:29.274078+00:00",
+  "random_seed": 42,
+  "environment": {
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "python_version": "3.12.13",
+    "torch_version": "2.10.0+cu128",
+    "cuda_version": "12.8",
+    "transformers_version": "5.0.0",
+    "numpy_version": "2.0.2",
+    "matplotlib_version": "3.10.0",
+    "gpu": "Tesla T4 (14.6 GB)",
+    "device_used": "cuda",
+    "is_google_colab": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cudnn_version": "91002"
+  },
+  "model": {
+    "name": "gpt2",
+    "source": "huggingface/transformers",
+    "vocab_size": 50257,
+    "n_parameters": 124439808,
+    "state_dict_sha256": "dba84d2c855de566de82c528dfbb95cca860ca1e9fe345cfc0abbb53fb7460af",
+    "tokenizer_vocab_sha256": "5ef55c89f5439ed6ccc0d6960875e06967265c89552024d42d91844a56699755"
+  },
+  "experiment_config": {
+    "n_requested_samples": 500,
+    "n_total_attempts": 516,
+    "n_valid_token_reversal": 516,
+    "n_valid_block_reversal": 500,
+    "n_skipped_block_reversal": 16,
+    "block_skip_rate_no_delimiter": 0.031007751937984496,
+    "generated_max_new_tokens": 120,
+    "generated_temperature": 1.0
+  },
+  "key_results": {
+    "generated_sigma_token_per_T_mean": 3.990138777233126,
+    "generated_sigma_block_per_Tprime_mean": 0.4689587089418867,
+    "generated_sigma_token_Tprime_per_Tprime_mean": 4.055417202692808,
+    "generated_sigma_token_N": 516,
+    "generated_sigma_block_N": 500,
+    "generated_sigma_token_Tprime_N": 500
+  }
+}
