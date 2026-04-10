@@ -1,6 +1,6 @@
 Code and data for the paper:
 
-"Stochastic Thermodynamics for Autoregressive Generative Models: A Non-Markovian Perspective" (arXiv:2604.07867, 2026)
+"Stochastic Thermodynamics for Autoregressive Generative Models: A Non-Markovian Perspective" (arXiv:2604.07867)
 by Takahiro Sagawa (The University of Tokyo)
 
 http://arxiv.org/abs/2604.07867
