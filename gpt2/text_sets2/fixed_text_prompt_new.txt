@@ -4,14 +4,14 @@ Generate two sets of short English texts, 100 texts in each set. Each text must 
 
 #Set A ("causal"): Each text should be a short narrative describing a sequence of events in temporal/causal order. The 4 sentences should describe things that happen one after another. Do not mark the order with dates, weekday names, or clock times.
 
-Example (use this as the first entry of causal_texts):https://github.com/taksagawa/Paper2026/blob/main/gpt2/fixed_text_prompt_new.txt
+Example (use this as the first entry of causal_texts):
 "The glass slipped from Alice's hand. The glass fell to the floor. The glass broke into many pieces. The glass left a wet stain on the tile floor."
 
 
 #Set B ("non-causal"): Each text should consist of 4 independent one-time events. The events should have no temporal, causal, or discourse dependency on each other, and their order should be freely exchangeable. In particular, avoid listing items in a conventional ascending or descending order (e.g., by size, date, or number).
 
 Example (use this as the first entry of noncausal_texts):
-"The town library lent a heavy atlas. The town library hosted a chess tournament. The town library displayed old photographs. The town library received a donated wooden shelf."
+"The library lent a heavy atlas. The library hosted a chess tournament. The library displayed old framed photographs. The library received a donated wooden shelf from a volunteer."
 
 
 #Additional rules for both sets:
